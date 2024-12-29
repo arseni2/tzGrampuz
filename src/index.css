@@ -714,10 +714,34 @@ a {
     color: var(--color-primary);
 }
 .include_cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
     gap: 30px;
     justify-content: center;
+}
+@media (width <= 1200px) {
+    .include_cards {
+        display: grid;
+        grid-template-columns: repeat(3, 270px);
+        gap: 30px;
+        justify-content: center;
+    }
+}
+@media (width <= 900px) {
+    .include_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 270px);
+        gap: 30px;
+        justify-content: center;
+    }
+}
+@media (width <= 900px) {
+    .include_cards {
+        display: grid;
+        grid-template-columns: repeat(1, 270px);
+        gap: 30px;
+        justify-content: center;
+    }
 }
 .include_cards_item_title {
     font-weight: 700;
